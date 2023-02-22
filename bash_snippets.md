@@ -16,9 +16,9 @@
 > sudo blkid
 ##### Disable all swap devices
 > sudo swapoff -a
-##### Enable swap `<swap_device_path>`
+##### Disable swap `<swap_device_path>`
 > sudo swapoff `<swap_device_path>`
-##### Disable all swap devices
+##### Enable all swap devices
 > sudo swapon -a
 ##### Enable swap `<swap_device_path>`
 > sudo swapon `<swap_device_path>`
