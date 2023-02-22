@@ -30,7 +30,7 @@
 > getsebool -a | grep `<httpd>`
 ##### List TCP connections to remote addresses.
 > netstat -t
-##### Update the system’s timezone by overwriting the symlink /etc/localtime.
+##### Update the system's timezone by overwriting the symlink /etc/localtime.
 > sudo ln -sf /usr/share/zoneinfo/Australia/Brisbane /etc/localtime
 ##### Change a machine’s hostname.
 > hostnamectl set-hostname <host_name>
