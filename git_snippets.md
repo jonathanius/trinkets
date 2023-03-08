@@ -9,6 +9,9 @@
 
 > git remote show `<origin>`
 
+#### Prune remote branches
+> git fetch --prune
+
 #### Create remote `<branch>` on `<origin>` from local and set it to be upstream.
 
 > git push -u `<origin>` `<branch>`
@@ -61,10 +64,10 @@ Force delete uncommitted changes
 
 > git log --pretty=format:"%ai%n%an%n%H" -n 1 `<remote>`/`<branch>`
 
-Display the patch information
+Display patch information
 > git log --format=medium -n 1 -p `<filename>`
 
-Display the statistics
+Display log statistics
 > git log --format=medium -n 1 --stat `<filename>`
 
 #### Additional Information about `<commit id>`
