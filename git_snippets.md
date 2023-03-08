@@ -49,7 +49,7 @@ Force delete uncommitted changes
 > git log --graph --oneline --all
 
 ##### Display the branch currently checked out
-> git branch --show-current
+> git show-branch --current
 
 #### The commit history comments of `<filename>`
 > git shortlog -p `<filename>`
