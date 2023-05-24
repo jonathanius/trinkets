@@ -51,6 +51,10 @@ Force delete uncommitted changes
 #### Display commit graph for all branches
 > git log --graph --oneline --all
 
+#### Compare files changed between `<upstream_branch>` and `<working_branch>`
+> git checkout `<working_branch>` <br>
+> git diff --name-only `<upstream_branch>`
+
 ##### Display the branch currently checked out
 > git show-branch --current
 
