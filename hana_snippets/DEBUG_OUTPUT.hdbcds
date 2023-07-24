@@ -1,0 +1,12 @@
+namespace my.development.namespace;
+
+entity DEBUG_OUTPUT {
+    key MESSAGE_ID     : INTEGER generated always as identity(start with 1 increment by 1);
+        EXECUTION_TIME : UTCTimestamp;
+        DEBUG_MESSAGE  : String(2000);
+        VARIABLE_NAME  : String(500);
+        VARIABLE_VALUE : String(500);
+}
+technical configuration {
+    column store;
+};
