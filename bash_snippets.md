@@ -1,3 +1,5 @@
+##### Redirect `<command>` output by appending to `<file_path>`.
+> `<command>` >> `<file_path>`
 ##### List directory contents recursively including details.
 > ls -alR
 ##### List all running processes.
