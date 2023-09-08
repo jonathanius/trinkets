@@ -36,7 +36,7 @@ Graph representation and summarised version of the log.
 #### Discard working changes
 > git reset --hard
 
-#### Checkout a prior `<commit id>` to update the working directory to a prior state. Note that pulling from upstream may fast-forward back to the current working state. Therefore, it is a good idea to create a `<new_branch>` with `<commit id>` as its head.
+#### Checkout a prior `<commit id>` to update the working directory to a prior state. Note that pulling from upstream may fast-forward back to the current working state. Therefore, it may be convenient to create a `<new_branch>` with `<commit id>` as its head.
 > git checkout `<commit id>` <br>
 > git branch `<new_branch>` <br>
 > git checkout `<new_branch>`
