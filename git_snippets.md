@@ -36,13 +36,13 @@ Graph representation and summarised version of the log.
 #### Discard working changes
 > git reset --hard
 
-#### Checkout a prior `<commit id>` to update the working directory to a prior state. Note that pulling from upstream may fast-forward back to the current working state. Therefore, it may be convenient to create a `<new_branch>` with `<commit id>` as its head.
-> git checkout `<commit id>` <br>
+#### Checkout a prior `<commit_id>` to update the working directory to a prior state. Note that pulling from upstream may fast-forward back to the current working state. Therefore, it may be convenient to create a `<new_branch>` with `commit_id` as its head.
+> git checkout `<commit_id>` <br>
 > git branch `<new_branch>` <br>
 > git checkout `<new_branch>`
 
-#### Revert to a previous `<commit id>`. This will create a new commit and, so, may result in merge conflicts.
-> git revert `<commit id>`
+#### Revert to a previous `<commit_id>`. This will create a new commit and, so, may result in merge conflicts.
+> git revert `<commit_id>`
 
 #### Delete `<branch>`
 Force delete uncommitted changes
@@ -57,39 +57,50 @@ Force delete uncommitted changes
 > git checkout `<working_branch>` <br>
 > git diff --name-only `<upstream_branch>`
 
+#### Generate a diff for `<file_name>` between `<old_commit>` and `<new_commit>`
+> git diff `<file_name>` `<old_commit>` `<new_commit>`
+
+Redirect the diff above to `<diff_file.txt>` using diff command option.
+> git diff --output `<diff_file.txt>` `<file_name>` `<old_commit>` `<new_commit>`
+
+Redirect the diff above to `<diff_file.txt>` by redirecting standard output.
+> git diff `<file_name>` `<old_commit>` `<new_commit>` >> `<diff_file.txt>`
+
 ##### Display the branch currently checked out
 > git show-branch --current
 
-#### The commit history comments of `<filename>`
-> git shortlog -p `<filename>`
+#### The commit history comments of `<file_name>`
+> git shortlog -p `<file_name>`
 
-#### The most recent commit for `<filename>`
-> git log -n 1 -p `<filename>`
+#### The most recent commit for `<file_name>`
+> git log -n 1 -p `<file_name>`
 
-> git log --pretty=format:"%ai%n%an%n%H" -n 1 -p `<filename>`
+> git log --pretty=format:"%ai%n%an%n%H" -n 1 -p `<file_name>`
 
+Display commit information from `<branch>` on `<remote>`. Fetch from remote first to ensure that origin is up to date.
+> git fecth `<remote>`
 > git log --pretty=format:"%ai%n%an%n%H" -n 1 `<remote>`/`<branch>`
 
-Display patch information
-> git log --format=medium -n 1 -p `<filename>`
+Display patch information for `<file_name>`
+> git log --format=medium -n 1 -p `<file_name>`
 
 Display log statistics
-> git log --format=medium -n 1 --stat `<filename>`
+> git log --format=medium -n 1 --stat `<file_name>`
 
-#### Additional Information about `<commit id>`
-Display local branches that contain `<commit id>`.
-> git branch --contains `<commit id>`
+#### Additional Information about `<commit_id>`
+Display local branches that contain `<commit_id>`.
+> git branch --contains `<commit_id>`
 
-Display remote branches that contain `<commit id>`.
-> git branch --remote --contains `<commit id>`
+Display remote branches that contain `<commit_id>`.
+> git branch --remote --contains `<commit_id>`
 
 #### Search files in the working directory
-List file names and line numbers that match `<serch pattern>`
-> git grep -n `<search pattern>`
+List file names and line numbers that match `<serch_pattern>`
+> git grep -n `<search_pattern>`
 
 #### Search the log
-Locate `<search string>` in the last commit to the working branch
-> git log -n 1 -S `<search string>`
+Locate `<search_string>` in the last commit to the working branch
+> git log -n 1 -S `<search_string>`
 
-Locate `<regex string>` in the last commit to `<filename>`
-> git log -n 1 -G `<regex string>` --stat `<filename>`
+Locate `<regex_string>` in the last commit to `<file_name>`
+> git log -n 1 -G `<regex_string>` --stat `<file_name>`
