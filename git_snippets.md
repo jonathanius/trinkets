@@ -12,6 +12,9 @@
 #### Prune remote branches
 > git fetch --prune
 
+#### Run the garbage collector to remove loose objects and reduce the size of the local DB.
+> git gc
+
 #### Create remote `<branch>` on `<origin>` from local and set it to be upstream.
 
 > git push -u `<origin>` `<branch>`
