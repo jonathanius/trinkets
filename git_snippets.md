@@ -4,25 +4,11 @@
 [Comparison of Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows) <br>
 [Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
-#### List all branches from `<origin>`
-> git ls-remote `<origin>`
-
-> git remote show `<origin>`
-
-#### Prune remote branches
-> git fetch --prune
-
 #### Run the garbage collector to remove loose objects and reduce the size of the local DB.
 > git gc
 
 #### Create remote `<branch>` on `<origin>` from local and set it to be upstream.
-
 > git push -u `<origin>` `<branch>`
-
-#### List remote branches
-> git branch -r
-
-> git branch --remote
 
 #### Display the log of the current branch
 Full log information
@@ -94,9 +80,6 @@ Display log statistics
 Display local branches that contain `<commit_id>`.
 > git branch --contains `<commit_id>`
 
-Display remote branches that contain `<commit_id>`.
-> git branch --remote --contains `<commit_id>`
-
 #### Search files in the working directory
 List file names and line numbers that match `<serch_pattern>`
 > git grep -n `<search_pattern>`
@@ -105,5 +88,29 @@ List file names and line numbers that match `<serch_pattern>`
 Locate `<search_string>` in the last commit to the working branch
 > git log -n 1 -S `<search_string>`
 
-Locate `<regex_string>` in the last commit to `<file_name>`
+#### Locate `<regex_string>` in the last commit to `<file_name>`
 > git log -n 1 -G `<regex_string>` --stat `<file_name>`
+
+### Remote Repositories
+[Git Documentation](https://docs.github.com/en/get-started/git-basics/managing-remote-repositories)
+#### List remote branches
+> git branch -r
+
+> git branch --remote
+
+#### List remote URLs
+> git remote -v
+
+#### Change remote `name`'s URL (HTTPS) to `host.domain`, `owner`, and `repository`
+> git remote set-url `name` https://`host.domain`/`owner`/`repository`.git
+
+#### List all branches from `<origin>`
+> git ls-remote `<origin>`
+
+> git remote show `<origin>`
+
+#### Prune remote branches
+> git fetch --prune
+
+#### Display remote branches that contain `<commit_id>`.
+> git branch --remote --contains `<commit_id>`
