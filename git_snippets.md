@@ -33,6 +33,9 @@ Graph representation and summarised version of the log.
 #### Revert to a previous `<commit_id>`. This will create a new commit and, so, may result in merge conflicts.
 > git revert `<commit_id>`
 
+#### Diff the current working branch to `<compare__to_branch>` for a specific `<sub_directory>` and send output to `<out_file>`.
+git diff ..<compare__to_branch> /<sub_directory>/* > <out_file>.diff
+
 #### Delete `<branch>`
 Force delete uncommitted changes
 > git branch -D `<branch>`
