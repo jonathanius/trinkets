@@ -28,8 +28,8 @@ Graph representation and summarised version of the log.
 #### Delete all files in local working directory and recreate from upstream. Useful to handle changed EOL characters when changing `git config core.autocrlf`.
 > git rm --chached -r.; git reset --hard 
 
-#### Create a <new_branch> set to track a remote branch <origin/main>
-git branch `<new_branch>` -t `<origin/main>`
+#### Create a <new_branch> set to track a remote branch <origin/main>; then checkout <new_branch>.
+git branch `<new_branch>` -t `<origin/main>`; git checkout `<new_branch>`
 
 #### Checkout a prior `<commit_id>` to update the working directory to a prior state. Note that pulling from upstream may fast-forward back to the current working state. Therefore, it may be convenient to create a `<new_branch>` with `commit_id` as its head.
 > git checkout `<commit_id>` <br>
