@@ -40,7 +40,7 @@ Graph representation and summarised version of the log.
 > git revert `<commit_id>`
 
 #### Diff the current working branch to `<compare__to_branch>` for a specific `<sub_directory>` and send output to `<out_file>`.
-git diff ..<compare__to_branch> /<sub_directory>/* > <out_file>.diff
+> git diff ..<compare__to_branch> /<sub_directory>/* > <out_file>.diff
 
 #### Delete `<branch>`
 Force delete uncommitted changes
@@ -58,11 +58,11 @@ Force delete uncommitted changes
 #### Generate a diff for `<file_name>` between `<old_commit>` and `<new_commit>`
 > git diff `<file_name>` `<old_commit>` `<new_commit>`
 
-Redirect the diff above to `<diff_file.txt>` using diff command option.
-> git diff --output `<diff_file.txt>` `<file_name>` `<old_commit>` `<new_commit>`
+Redirect the diff above to `<file.diff>` using diff command option.
+> git diff --output `<file.diff>` `<file_name>` `<old_commit>` `<new_commit>`
 
-Redirect the diff above to `<diff_file.txt>` by redirecting standard output.
-> git diff `<file_name>` `<old_commit>` `<new_commit>` >> `<diff_file.txt>`
+Redirect the diff above to `<file.diff>` by redirecting standard output.
+> git diff `<file_name>` `<old_commit>` `<new_commit>` > `<file.diff>`
 
 ##### Display the branch currently checked out
 > git show-branch --current
@@ -75,15 +75,18 @@ Redirect the diff above to `<diff_file.txt>` by redirecting standard output.
 
 > git log --pretty=format:"%ai%n%an%n%H" -n 1 -p `<file_name>`
 
-Display commit information from `<branch>` on `<remote>`. Fetch from remote first to ensure that origin is up to date.
-> git fecth `<remote>`
+#### Display commit information from `<branch>` on `<remote>`. Fetch from remote first to ensure that origin is up to date.
+> git fetch `<remote>`
 > git log --pretty=format:"%ai%n%an%n%H" -n 1 `<remote>`/`<branch>`
 
-Display patch information for `<file_name>`
+#### Display patch information for `<file_name>`
 > git log --format=medium -n 1 -p `<file_name>`
 
-Display log statistics
+#### Display log statistics
 > git log --format=medium -n 1 --stat `<file_name>`
+
+#### Cherry-pick `<commit_id>` onto the current working branch.
+> git cherry-pick `<commit_id>`
 
 #### Additional Information about `<commit_id>`
 Display local branches that contain `<commit_id>`.
