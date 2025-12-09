@@ -7,7 +7,10 @@
 #### Run the garbage collector to remove loose objects and reduce the size of the local DB.
 > git gc
 
-#### Create remote `<branch>` on `<origin>` from local and set it to be upstream.
+#### Push local `<branch_name>` to a remote named `<origin>`. Note that 'origin' is the default name for a remote created using `git clone`.
+git push `<origin>` `<branch_name>`
+
+#### Create remote `<branch>` on `<origin>` from local and set it to be upstream. That has the advantage of being able to push to it by default.
 > git push -u `<origin>` `<branch>`
 
 #### Display the log of the current branch
@@ -87,9 +90,6 @@ Redirect the diff above to `<file.diff>` by redirecting standard output.
 
 #### Cherry-pick `<commit_id>` onto the current working branch.
 > git cherry-pick `<commit_id>`
-
-#### Push local `<branch_name>` to a remote named `<origin>`. Note that 'origin' is the default name for a remote created using `git clone`.
-git push `<origin>` `<branch_name>`
 
 #### Additional Information about `<commit_id>`
 Display local branches that contain `<commit_id>`.
