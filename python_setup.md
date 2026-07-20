@@ -1,4 +1,4 @@
-Temporarily add PyPI and supporting files domain to trusted hosts to install pip-system-certs to allow Windows to rely on local certificates. This can be useful when a proxy issues a self-signed certificate causing PyPI's certificate to show as invalid.
+Temporarily add PyPI's files domain to trusted hosts, and then install pip-system-certs to allow Windows to rely on local certificates. This can be useful when a proxy issues a self-signed certificate causing PyPI's certificate to show as invalid.
 
 For example, dealing with this error message:
 `WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: 
