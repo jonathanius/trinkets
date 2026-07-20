@@ -3,8 +3,6 @@ Temporarily add PyPI's files domain to trusted hosts, and then install pip-syste
 For example, dealing with this error message:
 `WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: 
 CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))': /simple/pip/
-WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: 
-CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)'))': /simple/pip/`
 
 > python -m pip config set global.trusted-host "pypi.org files.pythonhosted.org"
 
